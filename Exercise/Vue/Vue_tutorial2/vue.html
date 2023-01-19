@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 2.0 Tutorial</title>
+    <!-- <link href="./style.css" rel="stylesheet"> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="main">
+        <h1>Loop</h1>
+        <p v-for="name in names">{{name}}</p>
+        <ul>
+            <li v-for="rep in report">Name:{{rep.name}}  Status:{{rep.status}}</li>
+        </ul>
+        <template v-for="rep in report">
+            <div v-for="(key,value) in rep">
+                <span>{{value}}:{{key}}</span>
+            </div>
+        </template>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

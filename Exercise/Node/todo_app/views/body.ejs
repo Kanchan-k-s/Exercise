@@ -1,0 +1,14 @@
+<%-include ('header') -%>
+<h1>My to-do LIST</h1>
+<div id="todo-table">
+    <form >
+        <input type="text" name="item" placeholder="Add new item..." required />
+        <button type="submit" >Add Item</button>
+    </form>
+    <ul>
+        <% for (var i=0;i < todos.length ; i++){%>
+            <li><%= todos[i].item %></li>
+        <% }%>
+    </ul>
+</div>
+<%-include ('footer') -%>  
